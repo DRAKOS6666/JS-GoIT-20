@@ -1,45 +1,43 @@
 let logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 
 const isLoginValid = function (login) {
-  if (login.length > 4 && login.length < 16) return true;
-  else {
-    return false;
-  }
+  let result = false;
+  if (login.length >= 4 && login.length < 16) result = true;
+  return result;
 };
 
 const isLoginUnique = function (allLogins, login) {
+  let result = false;
   if (!allLogins.includes(login)) {
-    return true;
-  } else {
-    return false;
+    result = true;
   }
+  return result;
 };
 
 const addLogin = function (allLogins, login) {
+  let message = "";
   if (isLoginValid(login)) {
     if (isLoginUnique(allLogins, login)) {
       allLogins.push(login);
-      console.log("Логин успешно добавлен!");
-      return allLogins;
+      message = "Логин успешно добавлен!";
     } else {
-      console.log("Такой логин уже используется!");
+      message = "Такой логин уже используется!";
     }
   } else {
-    console.log("Ошибка! Логин должен быть от 4 до 16 символов!");
+    message = "Ошибка! Логин должен быть от 4 до 16 символов!";
   }
+  console.log(message);
+  return allLogins;
 };
 
 const input = prompt("Введите логин");
 if (input === null) {
   alert("Отменено пользователем!");
 } else {
-  const newLogins = addLogin(logins, input);
-  if (newLogins != undefined) {
-    logins = newLogins;
-  }
+  addLogin(logins, input);
 }
 
-console.log(addLogin(logins, "Ajax")); // 'Логин успешно добавлен!'
-console.log(addLogin(logins, "robotGoogles")); // 'Такой логин уже используется!'
-console.log(addLogin(logins, "Zod")); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log(addLogin(logins, "jqueryisextremelyfast")); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+addLogin(logins, "Ajax"); // 'Логин успешно добавлен!'
+addLogin(logins, "robotGoogles"); // 'Такой логин уже используется!'
+addLogin(logins, "Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+addLogin(logins, "jqueryisextremelyfast"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
