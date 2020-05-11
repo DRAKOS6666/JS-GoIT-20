@@ -8,11 +8,9 @@ const products = [
 const calculateTotalPrice = function (allProdcuts, productName) {
   let totalCost = 0;
   for (const obj of allProdcuts) {
-    for (const prop in obj) {
-      if (obj[prop] === productName) {
-        totalCost = obj.price * obj.quantity;
-        return totalCost;
-      }
+    if (obj.name === productName) {
+      totalCost = obj.price * obj.quantity;
+      return totalCost;
     }
   }
   return totalCost;

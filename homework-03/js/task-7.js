@@ -70,7 +70,7 @@ const account = {
    * Метод возвращает текущий баланс
    */
   getBalance() {
-    return account.balance;
+    return this.balance;
   },
 
   /*
