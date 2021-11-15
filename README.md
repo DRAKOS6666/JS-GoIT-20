@@ -119,3 +119,18 @@
   [Страница приложения](https://drakos6666.github.io/goit-js-hw-11-timer/)
   
   [Исходники](https://github.com/DRAKOS6666/goit-js-hw-11-timer)
+  
+   ## [Домашняя работа №12](https://github.com/goitacademy/javascript-homework/tree/main/homework-12)
+### AJAX. Fetch API. CRUD:
+ 
+  [Страница приложения](https://drakos6666.github.io/goit-js-hw-12-countries/)
+  
+  [Исходники](https://github.com/DRAKOS6666/goit-js-hw-12-countries)
+  
+   ## [Домашняя работа №13](https://github.com/goitacademy/javascript-homework/tree/main/homework-13)
+### Синтаксис async/await:
+ 
+  [Страница приложения](https://drakos6666.github.io/goit-js-hw-13-image-finder/)
+  
+  [Исходники](https://github.com/DRAKOS6666/goit-js-hw-13-image-finder)
+ 
